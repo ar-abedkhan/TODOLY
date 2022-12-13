@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".Addtodo">
+
+
+
+
+
+    <TextView
+        android:background="@color/c2"
+        android:id="@+id/t"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Your Todo"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/t"
+            android:id="@+id/lay1"
+            >
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white"
+                android:id="@+id/v"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/todono"
+                app:layout_constraintTop_toBottomOf="@id/v"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="ToDo Title :"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/title"
+                app:layout_constraintTop_toBottomOf="@id/todono"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:text="ToDo Title :"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/todotitle"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:hint="Todo Title :"
+                android:textColorHint="@color/black"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Discription"
+                app:layout_constraintTop_toBottomOf="@id/todotitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:hint="Todo Description :"
+                android:textColorHint="@color/white"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/todoDiscription"
+                app:layout_constraintTop_toBottomOf="@id/Discription"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:layout_height="wrap_content"
+                android:text="todo des gduud bdy ddhhfgg fhfgffhfu"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="15dp"
+                android:inputType="textMultiLine"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                app:layout_constraintTop_toBottomOf="@id/todoDiscription"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="35dp"
+                android:id="@+id/clock"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/clock"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/todoDiscription"
+                app:layout_constraintStart_toEndOf="@id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:text="09:22 pm"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/todotime"
+                />
+            <ImageView
+                app:layout_constraintTop_toBottomOf="@id/todotime"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="35dp"
+                android:id="@+id/calender"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/calendar"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/todotime"
+                app:layout_constraintStart_toEndOf="@id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:text="10-12-2022"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/tododate"
+                />
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/tododate"
+                  android:text="Selected Cetagory :"
+                  android:textColor="@color/white"
+                  android:textSize="20dp"
+                  android:textStyle="bold"
+                  android:id="@+id/cname"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="15dp"
+                  />
+              <TextView
+                  app:layout_constraintStart_toStartOf="parent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/cname"
+                  android:text="health"
+                  android:textColor="@color/c1"
+                  android:textStyle="bold"
+                  android:paddingStart="8dp"
+                  android:paddingEnd="8dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"
+                  android:id="@+id/health"
+                  android:background="@drawable/cback"
+                  android:textSize="20dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="15dp"
+                  />
+
+              <TextView
+                  app:layout_constraintStart_toEndOf="@id/health"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/cname"
+                  android:text="work"
+                  android:textColor="@color/c1"
+                  android:textStyle="bold"
+                  android:paddingStart="8dp"
+                  android:paddingEnd="8dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"                  android:id="@+id/work"
+                  android:background="@drawable/cback"
+                  android:textSize="20dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+              <TextView
+                  app:layout_constraintStart_toEndOf="@id/work"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/cname"
+                  android:text="Peesonal"
+                  android:textColor="@color/c1"
+                  android:textStyle="bold"
+                  android:paddingStart="8dp"
+                  android:paddingEnd="8dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"                  android:id="@+id/personal"
+                  android:background="@drawable/cback"
+                  android:textSize="20dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+              <TextView
+                  app:layout_constraintStart_toEndOf="@id/personal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/cname"
+                  android:text="shopping"
+                  android:textColor="@color/c1"
+                  android:textStyle="bold"
+                  android:paddingStart="8dp"
+                  android:paddingEnd="8dp"
+                  android:paddingTop="5dp"
+                  android:paddingBottom="5dp"                  android:id="@+id/shopping"
+                  android:background="@drawable/cback"
+                  android:textSize="20dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  />
+
+            <TextView
+                app:layout_constraintStart_toStartOf="@id/health"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/shopping"
+                  android:text="ToDo Status :"
+                  android:textColor="@color/white"
+                  android:id="@+id/status"
+                  android:textSize="20dp"
+                android:textStyle="bold"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  />
+                        <TextView
+                app:layout_constraintStart_toStartOf="@id/health"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/status"
+                  android:text="Un Done"
+                  android:textColor="@color/white"
+                  android:id="@+id/todostatus"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"                            android:background="@drawable/circle"
+                  android:textSize="20dp"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginStart="100dp"
+                  />
+
+                        <TextView
+                app:layout_constraintStart_toStartOf="@id/health"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/todostatus"
+                  android:text="ToDo Priority : "
+                  android:textColor="@color/white"
+                  android:id="@+id/priority"
+                  android:textSize="20dp"
+                            android:textStyle="bold"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  />
+                                    <TextView
+                app:layout_constraintStart_toEndOf="@id/priority"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@id/todostatus"
+                  android:text="High "
+                  android:textColor="@color/black"
+                  android:id="@+id/todopriority"
+                  android:textSize="20dp"
+                                        android:padding="5dp"
+                                        android:background="@drawable/back3"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginStart="5dp"
+                  android:textStyle="bold"
+                  />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

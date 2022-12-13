@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+
+    tools:context=".Addtodo">
+
+    <TextView
+        android:background="@color/c2"
+        android:id="@+id/t"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create what you TO DO"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@id/t"
+        android:id="@+id/ser1"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lay1"
+            >
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/white"
+                android:id="@+id/v"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+
+
+
+            <EditText
+                android:layout_marginTop="30sp"
+                android:id="@+id/todotitle"
+                app:layout_constraintTop_toBottomOf="@id/v"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:hint="Todo Title Name"
+                android:textColorHint="@color/white"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/todoDiscription"
+                app:layout_constraintTop_toBottomOf="@id/todotitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/abhaya_libre_semibold"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Todo Descripion"
+                android:textColorHint="@color/white"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/ser1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="@color/c2"
+                    android:paddingBottom="6dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/timeselect"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/clock"
+                            android:layout_marginBottom="3dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="Set Time"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/dateselect"
+
+                        >
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/calendar"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="Set Date"
+                            android:layout_gravity="center"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/submitbtm"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/check"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="Add TODO"
+                            android:layout_gravity="center"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/l1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="150dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/abhaya_libre_semibold"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:hint="12-08-22"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/white"
+                    android:inputType="datetime"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/time"
+                    app:layout_constraintTop_toBottomOf="@id/l1"
+                    app:layout_constraintStart_toEndOf="@id/date"
+                    android:layout_width="150dp"
+                    android:fontFamily="@font/abhaya_libre_semibold"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:padding="10dp"
+                    android:hint="09-54 PM"
+                    android:textColorHint="@color/white"
+                    android:inputType="time"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    app:layout_constraintTop_toBottomOf="@id/date"
+                    android:id="@+id/redioPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:background="#5C9DC4FD"
+                    android:weightSum="3"
+                    >
+                    <RadioButton
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/priorityHigh"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+                    <RadioButton
+                        android:id="@+id/PpriorityMedium"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+                    <RadioButton
+                        android:id="@+id/priorityLow"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        />
+
+                </RadioGroup>
+
+
+
+
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redioPriority"
+                    android:id="@+id/cetagorytect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Select Cetagory :"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/category"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/cetagorytect"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/cwork"
+                        >
+
+                        <ImageView
+                            android:id="@+id/work1"
+                            android:background="@drawable/cback"
+                            android:padding="10dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/work1"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Work"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toBottomOf="@+id/work1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:gravity="center"
+                            />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/cperson"
+                        >
+
+                        <ImageView
+                            android:id="@+id/person1"
+                            android:background="@drawable/cback"
+                            android:padding="13dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/person1"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="person"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toBottomOf="@+id/person1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:gravity="center"
+                            />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/cshopping"
+                        >
+
+                        <ImageView
+                            android:id="@+id/shopping1"
+                            android:background="@drawable/cback"
+                            android:padding="12dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/shopping2"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shopping"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toBottomOf="@+id/shopping1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:gravity="center"
+                            />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/chealth"
+                        >
+
+                        <ImageView
+                            android:id="@+id/health1"
+                            android:background="@drawable/cback"
+                            android:padding="10dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/health2"
+                            />
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Health"
+                            android:textColor="@color/black"
+                            app:layout_constraintTop_toBottomOf="@+id/health1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:gravity="center"
+                            />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
